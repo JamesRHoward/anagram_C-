@@ -48,7 +48,7 @@ namespace AnagramCheckerTest
     public void Anagram_ChecksForPartialAnagram_False()
     {
       var inputWord = "bread";
-      var inputAnagram = "reed";
+      var inputAnagram = "reedddddddddddddddd";
       Anagram testAnagram = new Anagram(inputWord, inputAnagram);
       Assert.Equal(false, testAnagram.CheckAnagram());
     }
