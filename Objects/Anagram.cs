@@ -29,7 +29,22 @@ namespace AnagramChecker.Objects
     {
       _anagram = anagram;
     }
-
+    public bool CheckAnagram()
+    {
+      char[] tempInput = _input.ToCharArray();
+      char[] tempAnagram = _anagram.ToCharArray();
+      Array.Sort(tempInput);
+      Array.Sort(tempAnagram);
+      for (int i = 0; i < tempInput.Length; i++)
+      {
+        Console.WriteLine("test" + tempInput[i] + " " + tempAnagram[i]);
+        if(tempInput[i] != tempAnagram[i])
+        {
+          return false;
+        }
+      }
+      return true;
+    }
 
   }
 }
