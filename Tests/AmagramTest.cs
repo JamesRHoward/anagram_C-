@@ -36,5 +36,21 @@ namespace AnagramCheckerTest
       Anagram testAnagram = new Anagram(inputWord, inputAnagram);
       Assert.Equal(false, testAnagram.CheckAnagram());
     }
+    [Fact]
+    public void Anagram_ChecksForPartialAnagram_True()
+    {
+      var inputWord = "bread";
+      var inputAnagram = "red";
+      Anagram testAnagram = new Anagram(inputWord, inputAnagram);
+      Assert.Equal(true, testAnagram.CheckAnagram());
+    }
+    [Fact]
+    public void Anagram_ChecksForPartialAnagram_False()
+    {
+      var inputWord = "bread";
+      var inputAnagram = "reed";
+      Anagram testAnagram = new Anagram(inputWord, inputAnagram);
+      Assert.Equal(false, testAnagram.CheckAnagram());
+    }
   }
 }
