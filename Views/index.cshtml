@@ -1,0 +1,14 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<div class="container">
+  <form action="/anagram">
+    <div class="form-group">
+      <label for="word_input">Input word to check anagram</label>
+      <input name="word_input" class="form-control" type="text" required="required">
+      <label for="anagram_input">Anagram check</label>
+      <input name="anagram_input" class="form-control" type="text" required="required">
+    <button type="submit">Check if its an anagram</button>
+  </form>
+  <h2>@Model.CheckAnagram()</h2>
+</div>
